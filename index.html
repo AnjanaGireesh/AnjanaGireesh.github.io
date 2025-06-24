@@ -1,74 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjana G | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anjana G | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Anjana G</h1>
-            <p>M.Tech Computer Science Student | AI | NLP | Full-Stack Developer</p>
-            <a href="#contact" class="btn">Contact Me</a>
+  <header class="hero">
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider round"></span>
+      </label>
+      <span class="mode-label">🌙</span>
+    </div>
+    <div class="overlay">
+      <h1 data-aos="fade-down">Anjana G</h1>
+      <p data-aos="fade-up">M.Tech CSE Student | AI | NLP | Full-Stack Developer</p>
+      <a href="#contact" class="btn" data-aos="fade-up">Contact Me</a>
+      <a href="assets/resume.pdf" class="btn-alt" download data-aos="fade-up">Download Resume</a>
+    </div>
+    <nav class="navbar">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>I’m <strong>Anjana G</strong>, an M.Tech Computer Science student passionate about AI, NLP, and full-stack development. I build practical systems with real-world value like a Sandhi Splitter, SQL Chatbot, and women safety app.</p>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Flutter</div>
+        <div class="skill-card">TensorFlow</div>
+        <div class="skill-card">BERT</div>
+        <div class="skill-card">Streamlit</div>
+        <div class="skill-card">Flask</div>
+        <div class="skill-card">SQLAlchemy</div>
+        <div class="skill-card">Plotly</div>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="assets/images/sandhi.png" alt="Sandhi Splitter">
+          <h3>Malayalam Sandhi Splitter</h3>
+          <p>BERT-based model to split compound Malayalam words. Interactive UI built in Streamlit.</p>
         </div>
-        <nav class="navbar">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm Anjana G, an M.Tech Computer Science student with a passion for AI, NLP, and full-stack development. I specialize in building intelligent language systems and practical apps with real-world impact, such as a Sandhi Splitter for Malayalam and a natural language-to-SQL chatbot system.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python, HTML, CSS, SQL, Flutter</li>
-                <li>TensorFlow, Streamlit, Flask</li>
-                <li>MySQL, Pandas, NumPy, SQLAlchemy</li>
-                <li>BERT, IndicBERT, Transformers</li>
-                <li>App Development (Android, Flutter)</li>
-                <li>Plotly, Streamlit Dashboards</li>
-                <li>Google Colab, Render, pyngrok</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-list">
-                <div class="project">
-                    <h3>Malayalam Sandhi Splitter</h3>
-                    <p>BERT-based Transformer model to split compound Malayalam words using a Streamlit interface.</p>
-                </div>
-                <div class="project">
-                    <h3>SQL Chatbot Dashboard</h3>
-                    <p>Streamlit + SQLAlchemy + Plotly-powered chatbot that turns natural language into SQL queries and visual insights.</p>
-                </div>
-                <div class="project">
-                    <h3>Women Safety App</h3>
-                    <p>Flutter app with emergency voice alerts, location tracking, and SOS features.</p>
-                </div>
-                <div class="project">
-                    <h3>Address Book with MySQL</h3>
-                    <p>A contact manager with multiple emails and phone numbers using Python and MySQL.</p>
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:ganjana369@gmail.com">ganjana369@gmail.com</a></p>
-            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/anjana-g-1048551b8/" target="_blank">LinkedIn</a></p>
-            <p><i class="fab fa-github"></i> <a href="https://github.com/AnjanaGireesh" target="_blank">GitHub</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Anjana G</p>
-    </footer>
+        <div class="project-card">
+          <img src="assets/images/sqlbot.png" alt="SQL Bot">
+          <h3>SQL Chatbot</h3>
+          <p>Natural language to SQL chatbot using LLM + Streamlit for dashboard generation.</p>
+        </div>
+        <div class="project-card">
+          <img src="assets/images/safety.png" alt="Safety App">
+          <h3>Women Safety App</h3>
+          <p>Flutter app with SOS alerts, location tracking, and voice recording in emergencies.</p>
+        </div>
+        <div class="project-card">
+          <img src="assets/images/addressbook.png" alt="Address Book">
+          <h3>MySQL Address Book</h3>
+          <p>Python & MySQL-based contact manager supporting multiple numbers & emails.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <div class="contact-methods">
+        <div class="contact-card">
+          <i class="fas fa-envelope fa-2x"></i>
+          <h3>Email</h3>
+          <p><a href="mailto:ganjana369@gmail.com">ganjana369@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-linkedin fa-2x"></i>
+          <h3>LinkedIn</h3>
+          <p><a href="https://www.linkedin.com/in/anjana-g-1048551b8/" target="_blank">linkedin.com/in/anjana-g</a></p>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-github fa-2x"></i>
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/AnjanaGireesh" target="_blank">github.com/AnjanaGireesh</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Anjana G</p>
+    <a href="#" class="top">Back to Top</a>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const toggle = document.getElementById('themeSwitch');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
